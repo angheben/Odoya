@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
     <title>Receitas</title>
 </head>
 <body>
@@ -12,7 +13,7 @@
      <div class="container-header">
         <header class="menu-principal">
             <div class="logo">
-                <img src="/img/logo-branco.png" alt="Logo da Odoyá">
+                <img src="{% static '/images/logo-branco.png' %}" alt="Logo da Odoyá">
             </div>
             <div>
                 <nav>
@@ -37,7 +38,7 @@
         </section>
         <section class="receitas container">
             <div class="receitas__item">
-                <img class="receitas__item__imagem" src="img/granola/bolacha.jpg" alt="Bolachas de granola">
+                <img class="receitas__item__imagem" src="{% static 'images/granola/bolacha.jpg' %}" alt="Bolachas de granola">
                     <div class="receitas__item__instrucoes">
                         <h2 class="receitas__item__titulo">Biscoito de granola</h2>
                         <h3 class="receitas__item__subtitulo">Ingredientes</h3>
@@ -77,7 +78,7 @@
                     </div>
                 </div>
             <div class="receitas__item">
-                <img class="receitas__item__imagem" src="img/granola/sopa-rosa.jpg" alt="Bolachas de granola">
+                <img class="receitas__item__imagem" src="{% static '/images/granola/sopa-rosa.jpg' %}" alt="Bolachas de granola">
                     <div class="receitas__item__instrucoes">
                         <h2 class="receitas__item__titulo">Cremoso e crocante</h2>
                         <h3 class="receitas__item__subtitulo">Ingredientes</h3>
@@ -102,7 +103,7 @@
     <footer class="footer">
         <div class="footer__linha1">
             <a class="footer__logo" href="/home.html">
-                <img src="/img/logo-branco.png" alt="Logo Odoya">
+                <img src="{% static '/images/logo-branco.png' %}" alt="Logo Odoya">
             </a>
             <div class="footer__column">                        
                 <div class="footer__midia">         
@@ -131,6 +132,6 @@
             <p>©2022 - All rights reserved - website produced by Veridiana Maricato</p>
         </div>
 </footer>    
-<script type="text/javascript" src="/js/home.js"></script>
+<script type="text/javascript" src="{% static '/js/home.js' %}"></script>
 </body> 
 </html>

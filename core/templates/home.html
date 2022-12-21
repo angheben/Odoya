@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="pt-Br">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="{% static '/css/style.css' %}">
         <title>Odoyá Home Page</title>
     </head>
     <body>
@@ -12,7 +13,7 @@
         <div class="container-header">
             <header class="menu-principal">
                 <div class="logo">
-                    <img src="/img/logo-branco.png" alt="Logo da Odoyá">
+                    <img src="{% static '/images/logo-branco.png' %}" alt="Logo da Odoyá">
                 </div>
                 <div>
                     <nav>
@@ -31,14 +32,14 @@
             <!-- FIM header -->        
         <main>
             <section class="home-container">                
-                <img src="/img/granola/colher2.png" alt="">
+                <img src="{% static '/images/granola/colher2.png' %}" alt="">
                 <div class="title">
                     <h1 class="home-title">ODOYÁ</h1>
                     <h2 class="home-subtitle">Granola doce e salgada</h2>
                 </div> 
              </section>
             <div class="logo-azul">
-                <img src="/img/logo-azul.png" alt="">
+                <img src="{% static '/images/logo-azul.png' %}" alt="">
             </div>
             <section class="sobre-home container">
                 <div class="texto-titulo">
@@ -52,7 +53,7 @@
                         Uma boa forma de identificar o gosto umami na boca é degustar um dos alimentos pelo qual ele é reconhecido. Saboreie lentamente e espere passar o gosto doce, salgado, azedo ou amargo inicial presente nele. O residual que ficará na boca será o umami. E como ele produz bastante saliva, esse residual tende a permanecer na boca um bom tempo
                         </p>   
                     </div>
-                <img src="img/granola/mesa-linda.jpg" alt="">    
+                <img src="{% static '/images/granola/mesa-linda.jpg' %}" alt="">
                 <a class="btn-pedido" href="/pedido.html">Peça já a sua!</a>
                 </section>
             <!-- Depoimentos -->
@@ -64,12 +65,12 @@
                     <div class="depoimentos__lista">
                         <div class="depoimentos__lista__3em3">
                             <section class="depoimentos__item depoimentos__item__current">                            
-                                <img src="img/estrelas.png" alt="Cinco estrelas">
+                                <img src="{% static '/image/estrelas.png' %}" alt="Cinco estrelas">
                                 <p class="depoimentos__texto">A melhor granola que já comi!</p>
                                 <p class="depoimentos__pessoa">Marina C.</p>
                             </section>
                             <section class="depoimentos__item depoimentos__item__current">
-                                <img src="img/estrelas.png" alt="Cinco estrelas">
+                                <img src="{% static '/image/estrelas.png' %}" alt="Cinco estrelas">
                                 <p class="depoimentos__texto">A Uma delícia!</p>
                                 <p class="depoimentos__pessoa">Marina F.</p>
                             </section>
@@ -81,17 +82,17 @@
                         </div>
                         <div class="depoimentos__lista__3em3">
                             <section class="depoimentos__item depoimentos__item__current">
-                                <img src="img/estrelas.png" alt="Cinco estrelas">
+                                <img src="{% static '/image/estrelas.png' %}" alt="Cinco estrelas">
                                 <p class="depoimentos__texto">Bótima</p>
                                 <p class="depoimentos__pessoa">Juliana S.</p>
                             </section>   
                             <section class="depoimentos__item depoimentos__item__current">
-                                <img src="img/estrelas.png" alt="Cinco estrelas">
+                                <img src="{% static '/image/estrelas.png' %}" alt="Cinco estrelas">
                                 <p class="depoimentos__texto">Perfeita!</p>
                                 <p class="depoimentos__pessoa">Giuliana S.</p>
                             </section>   
                             <section class="depoimentos__item depoimentos__item__current">
-                                <img src="img/estrelas.png" alt="Cinco estrelas">
+                                <img src="{% static '/image/estrelas.png' %}" alt="Cinco estrelas">
                                 <p class="depoimentos__texto">Bótima</p>
                                 <p class="depoimentos__pessoa">Juliana S.</p>
                             </section>   
@@ -104,7 +105,7 @@
         <footer class="footer">
                 <div class="footer__linha1">
                     <a class="footer__logo" href="/home.html">
-                        <img src="/img/logo-branco.png" alt="Logo Odoya">
+                        <img src="{% static '/images/logo-branco.png' %}" alt="Logo Odoya">
                     </a>
                     <div class="footer__column">                        
                         <div class="footer__midia">         
@@ -133,8 +134,8 @@
                     <p>©2022 - All rights reserved - website produced by Veridiana Maricato</p>
                 </div>
         </footer>    
-        <script type="module" src="/js/jquery.js"></script>
-        <script type="module" src="/js/slick.min.js"></script>
-        <script type="text/javascript" src="/js/home.js"></script>
+        <script type="module" src="{% static '/js/jquery.js' %}"></script>
+        <script type="module" src="{% static '/js/slick.min.js' %}"></script>
+        <script type="text/javascript" src="{% static '/js/home.js' %}"></script>
     </body> 
 </html>

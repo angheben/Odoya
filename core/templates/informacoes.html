@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="pt-Br">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="{% static '/css/style.css' %}">
         <title>Odoyá Home Page</title>
     </head>
     <body>
@@ -12,7 +13,7 @@
       <div class="container-header">
         <header class="menu-principal">
             <div class="logo">
-                <img src="/img/logo-branco.png" alt="Logo da Odoyá">
+                <img src="{% static '/images/logo-branco.png' %}" alt="Logo da Odoyá">
             </div>
             <div>
                 <nav>
@@ -45,7 +46,7 @@
                 <h3 class="sabores">Alga marinha </h3>  
                 
                 <div class="imagem-sabores">
-                    <img src="/img/granola/mesa-linda.jpg" alt="mesa com granola">
+                    <img src="{% static '/images/granola/mesa-linda.jpg' %}" alt="mesa com granola">
                 </div>
                     
                     <h2 class="texto-granola-titulo">Cebola e Salsa</h2>
@@ -60,7 +61,7 @@
         <footer class="footer">
             <div class="footer__linha1">
                 <a class="footer__logo" href="/home.html">
-                    <img src="/img/logo-branco.png" alt="Logo Odoya">
+                    <img src="{% static '/images/logo-branco.png' %}" alt="Logo Odoya">
                 </a>
                 <div class="footer__column">                        
                     <div class="footer__midia">         
@@ -89,6 +90,6 @@
                 <p>©2022 - All rights reserved - website produced by Veridiana Maricato</p>
             </div>
     </footer>    
-    <script type="text/javascript" src="/js/home.js"></script>
+    <script type="text/javascript" src="{% static '/js/home.js' %}"></script>
 </body> 
 </html>

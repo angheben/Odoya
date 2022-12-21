@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="pt-Br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
     <title>Pagamento</title>
 </head>
 <body>
@@ -12,7 +13,7 @@
     <div class="container-header">
         <header class="menu-principal">
             <div class="logo">
-                <img src="/img/logo-branco.png" alt="Logo da Odoyá">
+                <img src="{% static '/images/logo-branco.png' %}" alt="Logo da Odoyá">
             </div>
             <div>
                 <nav>
@@ -62,7 +63,7 @@
     <footer class="footer">
         <div class="footer__linha1">
             <a class="footer__logo" href="/home.html">
-                <img src="/img/logo-branco.png" alt="Logo Odoya">
+                <img src="{% static '/images/logo-branco.png' %}" alt="Logo Odoya">
             </a>
             <div class="footer__column">                        
                 <div class="footer__midia">         
@@ -93,6 +94,6 @@
 </footer>   
 <!-- Fim do footer -->
 <!-- PIX -->
-<script type="text/javascript" src="/js/home.js"></script>
+<script type="text/javascript" src="{% static '/js/home.js' %}"></script>
 </body>
 </html>
