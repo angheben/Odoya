@@ -1,5 +1,6 @@
 from django.db import models
 from stdimage.models import StdImageField
+from stdimage.utils import render_variations
 
 
 class Base(models.Model):
@@ -28,10 +29,12 @@ class Produto(Base):
         (1000, '1000')
     ]
 
-    nome = models.CharField(name='Nome', max_length=100)
-    preco = models.DecimalField(name='Preço', max_digits=10, decimal_places=2)
-    tipo = models.CharField(name='Tipo', max_length=100, choices=tipo_granola)
-    peso = models.IntegerField(name='Peso', choices=peso_granola, default=500)
-    imagem = StdImageField(name="Imagem", upload_to='imagens_produtos', variations={"thumb": {"width": 500,
-                                                                                              "height": 350,
-                                                                                              "crop": True}})
+    nome = models.CharField(name='nome', max_length=100)
+    preco = models.DecimalField(name='preco', max_digits=10, decimal_places=2)
+    tipo = models.CharField(name='tipo', max_length=100, choices=tipo_granola)
+    peso = models.IntegerField(name='peso', choices=peso_granola, default=500)
+    imagem = StdImageField(name="imagem", upload_to='imagens_produtos', default='Image',
+                           variations={'thumbnail': {'width': 100, 'height': 75}})
+
+    def __str__(self):
+        return self.nome

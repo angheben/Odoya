@@ -10,7 +10,6 @@
       <table class="table table-striped">
         <thead>
           <tr>
-            <th scope="col">#</th>
             <th scope="col">Imagem</th>
             <th scope="col">Nome</th>
             <th scope="col">Preço</th>
@@ -21,9 +20,9 @@
         <tbody>
           {% for produto in produtos %}
             <tr>
-              <td>{{produto.imagem}}</td>
-              <td>{{product.nome}}</td>
-              <td>US$ {{produto.preco|intcomma}}</td>
+              <td><img src="{{ produto.imagem.thumbnail.thumb.url }}" alt="{{ produto.nome }}"></td>
+              <td>{{produto.nome}}</td>
+              <td>R$ {{produto.preço|intcomma}}</td>
               <td>{{produto.tipo}}</td>
               <td>{{produto.peso}}</td>
               <td>
