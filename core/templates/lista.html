@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load humanize %}
+{% block content %}
+{% load static %}
+<head>
+  <link rel="stylesheet" href="{% static '/css/style_lista.css' %}">
+</head>
+<div class="row">
+  <h1> Lista de Produtos </h1>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Imagem</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Preço</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Peso</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for produto in produtos %}
+            <tr>
+              <td>{{produto.imagem}}</td>
+              <td>{{product.nome}}</td>
+              <td>US$ {{produto.preco|intcomma}}</td>
+              <td>{{produto.tipo}}</td>
+              <td>{{produto.peso}}</td>
+              <td>
+                <a class="btn btn-warning" href="{% url 'atualizar_produto' produto.pk %}">Edit</a>
+                <a class="btn btn-danger" href="{% url 'deletar_produto' produto.pk %}">Delete</a>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+</div>
+{% endblock %}

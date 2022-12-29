@@ -31,29 +31,33 @@ class PagamentoView(IndexView):
 
 class PedidoView(ListView):
     template_name = 'pedido.html'
+
+
+class ListaView(ListView):
+    template_name = 'lista.html'
     model = Produto
     queryset = Produto.objects.all()
     context_object_name = 'produtos'
 
 
 class AdicionarProdutoView(CreateView):
-    template_name = 'criar_produto.html'
+    template_name = 'adicionar_produto.html'
     model = Produto
     fields = ['Name', 'Type']
-    success_url = reverse_lazy['pedido.html']
+    success_url = reverse_lazy('pedido')
 
 
 class AtualizarProdutoView(UpdateView):
     template_name = 'atualizar_produto.html'
     model = Produto
     fields = ['Name', 'Type']
-    success_url = reverse_lazy['pedido.html']
+    success_url = reverse_lazy('pedido')
 
 
 class DeletarProdutoView(DeleteView):
     template_name = 'deletar_produto.html'
     model = Produto
-    success_url = reverse_lazy['pedido.html']
+    success_url = reverse_lazy('pedido')
 
 
 class ReceitasView(IndexView):
