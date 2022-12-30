@@ -20,9 +20,9 @@
         <tbody>
           {% for produto in produtos %}
             <tr>
-              <td><img src="{{ produto.imagem.thumbnail.thumb.url }}" alt="{{ produto.nome }}"></td>
+              <td><img src="{{ produto.imagem.thumb.url }}" alt="{{ produto.nome }}"></td>
               <td>{{produto.nome}}</td>
-              <td>R$ {{produto.preço|intcomma}}</td>
+              <td>R$ {{produto.preco|intcomma}}</td>
               <td>{{produto.tipo}}</td>
               <td>{{produto.peso}}</td>
               <td>

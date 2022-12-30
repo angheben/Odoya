@@ -33,8 +33,8 @@ class Produto(Base):
     preco = models.DecimalField(name='preco', max_digits=10, decimal_places=2)
     tipo = models.CharField(name='tipo', max_length=100, choices=tipo_granola)
     peso = models.IntegerField(name='peso', choices=peso_granola, default=500)
-    imagem = StdImageField(name="imagem", upload_to='imagens_produtos', default='Image',
-                           variations={'thumbnail': {'width': 100, 'height': 75}})
+    imagem = StdImageField(name="imagem", upload_to='imagens_produtos',
+                           variations={'thumb': {'width': 100, 'height': 150, 'crop': False}})
 
     def __str__(self):
         return self.nome
