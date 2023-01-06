@@ -26,8 +26,8 @@
               <td>{{produto.tipo}}</td>
               <td>{{produto.peso}}</td>
               <td>
-                <a class="btn btn-warning" href="{% url 'atualizar_produto' produto.pk %}">Edit</a>
-                <a class="btn btn-danger" href="{% url 'deletar_produto' produto.pk %}">Delete</a>
+                <a class="btn btn-warning" href="{% url 'atualizar_produto' produto.pk %}">Editar</a>
+                <a class="btn btn-danger" href="{% url 'deletar_produto' produto.pk %}">Deletar</a>
               </td>
             </tr>
           {% endfor %}
