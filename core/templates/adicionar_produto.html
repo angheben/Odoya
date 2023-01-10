@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+{% load static %}
+
+<head>
+  <link rel="stylesheet" href="{% static '/css/style_lista.css' %}">
+</head>
+  <h1> Produtos </h1>
+  <form method="post">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+      {% buttons %}
+        <button type="submit" class="btn btn-primary"> Salvar </button>
+        <button type="button" class="btn btn-warning">
+          <a href="{% url 'lista' %}"> Cancelar </a>
+        </button>
+      {% endbuttons %}
+  </form>
+{% endblock %}
